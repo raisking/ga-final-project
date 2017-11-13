@@ -1,21 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Items from './components/Items'
+import NavBar from './components/NavBar'
+import SignUpPage from './components/SignUpPage'
+import LoginPage from './components/LoginPage'
+// import SingleCreature from './components/SingleCreature' 
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <Router>
+        <div>
+          <NavBar/>
+          <Switch>
+             <Route exact path="/" component={Items}/>
+            <Route exact path="/SignUpPage" component={SignUpPage}/>
+            <Route exact path="/LoginPage" component={LoginPage}/>
+            
+            {/* <Route path="/:id" component={SingleCreature}/> */}
+          </Switch>
+        </div>
+      </Router>
+    )
   }
 }
 
-export default App;
+export default App

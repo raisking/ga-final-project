@@ -1,0 +1,15 @@
+input{
+    background-color: #ccc; 
+    width: 200px;
+    margin: 5px 0 5px 0;    
+    font-size: 14px;    
+}
+.WrapperUserForm{
+    border: 1px solid #ccc;
+    margin-top: 15px;
+    margin-bottom: 15px;    
+}
+.UserForm{
+    border: 1px solid #ccc;
+    padding: 10px;  
+}

@@ -1,34 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 import ItemForm from './ItemForm'
 import styled from 'styled-components'
+import "./css/SignUpPage.css"
+
 
 const Container = styled.div`
     display: flex;
     justify-content: center;
-   margin: 30px;
-    h1{
-        text-align: center;
-        text-shadow: 2px 2px 4px #000;
-    }
+    margin: 30px;
 `
 const BtnContainer = styled.div`   
     padding: 20px;
-    button {
-        background: #071824;
-        border-radius: 5px;
-        color: #ffffff;
-        font-size: 14px;
-        padding: 5px 10px 5px 10px;
-        margin-top: 10px;  
-        margin-bottom: 10px; 
-        text-decoration: none;
-    }
-    button:hover {
-        background: #4d697a;
-        text-decoration: none;
-    }
 `
 
 class SignUpPage extends Component {
@@ -46,11 +29,10 @@ class SignUpPage extends Component {
     toggleShowNewForm = () => {
         this.setState({ showNewForm: !this.state.showNewForm })
     }
-    render() {
+    render() {  
         return (
             <Container>
-                <div>
-                    <h1>Sign Up</h1>
+                <div class ="BtnWrapper">
                     <BtnContainer>
                         <button onClick={this.toggleShowNewForm}>Add New Item</button>
                         {this.state.showNewForm ? <ItemForm getAllItems={this.getAllItems} /> : null}

@@ -1,0 +1,14 @@
+.bid_Wrapper{
+    background-color: #ccc;
+    box-shadow: 2px 2px 5px rgb(25, 25, 26);
+    padding-left: 5px;
+}
+.bid_now{
+    background-color: red;
+}
+.bid_now:hover{ 
+    background-color: rgb(207, 88, 88);
+}
+button{
+    margin-left: 5px;
+}

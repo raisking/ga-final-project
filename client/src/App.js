@@ -4,20 +4,19 @@ import Items from './components/Items'
 import NavBar from './components/NavBar'
 import SignUpPage from './components/SignUpPage'
 import LoginPage from './components/LoginPage'
-// import SingleCreature from './components/SingleCreature' 
+import ItemPost from './components/ItemPost' 
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <Router>
         <div>
-          <NavBar/>
+          <NavBar />
           <Switch>
-             <Route exact path="/" component={Items}/>
-            <Route exact path="/SignUpPage" component={SignUpPage}/>
-            <Route exact path="/LoginPage" component={LoginPage}/>
-            
-            {/* <Route path="/:id" component={SingleCreature}/> */}
+            <Route exact path="/" component={Items} />
+            <Route exact path="/items/:id" component={ItemPost} />
+            <Route exact path="/SignUpPage" component={SignUpPage} />
+            <Route exact path="/LoginPage" component={LoginPage} />
           </Switch>
         </div>
       </Router>

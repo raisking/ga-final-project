@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One');
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+h1{
+    font-family: 'Sigmar One', cursive;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgb(113, 171, 209);
+}
+body{
+    font-family: 'Karla', sans-serif;
+}
+.freeshipping{
+    color: #cc352b;
+    font-weight: bold;
+}   
+.WrapperFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px;
+    padding: 20px;
+    color: #fff;
+ 
+}
+.container{
+    border: 1px solid rgb(99, 30, 30); 
+    background-color: #075353;
+    margin: 20px;
+    width: 300px;
+    height: auto;
+    padding: 0;  
+    box-shadow: 2px 2px 2px 4px #ccc;
+}
+button {
+    background: #1a4f72;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+}
+button:hover {
+    background: #316788;
+    text-decoration: none;
+}
+.label{
+    padding: 20px;
+}

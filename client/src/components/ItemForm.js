@@ -1,5 +1,22 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import styled from 'styled-components'
+
+const FormContainer = styled.div`
+    
+    input{
+        width: 200px;
+        background-color: #ccc; 
+        font-size: 14px;
+        padding: 5px;
+    }
+`
+const FormItem = styled.div`
+    display: block;
+    div{
+        margin: 200px;
+    }  
+`
 
 class ItemForm extends Component {
     state = {
@@ -7,9 +24,7 @@ class ItemForm extends Component {
         category: '',
         image: '',
         price: ''
-
     }
-
     handleChange = (event) => {
         const name = event.target.name
         const newState = { ...this.state }
@@ -31,27 +46,28 @@ class ItemForm extends Component {
 
     render() {
         return (
+            <FormContainer>
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <label htmlFor="name">Name: </label>
-                    <input onChange={this.handleChange} type="text" name="name" value={this.state.name} />
+                 <FormItem><label htmlFor="name"></label></FormItem>
+                    <input onChange={this.handleChange} type="text" name="name" placeholder="name" value={this.state.name} />
                 </div>
                 <div>
-                    <label htmlFor="category">Category: </label>
-                    <input onChange={this.handleChange} type="text" name="category" value={this.state.category} />
+                    <FormItem><label htmlFor="category"></label></FormItem>
+                    <input onChange={this.handleChange} type="text" name="category" placeholder ="category" value={this.state.category} />
                 </div>
                 <div>
-                    <label htmlFor="image">Image: </label>
-                    <input onChange={this.handleChange} type="text" name="image" value={this.state.image} />
+                   <FormItem> <label htmlFor="image"></label></FormItem>
+                    <input onChange={this.handleChange} type="url" name="image" placeholder="image url" value={this.state.image} />
                 </div>
                 <div>
-                    <label htmlFor="price">Price: </label>
-                    <input onChange={this.handleChange} type="text" name="price" value={this.state.price} />
+                    <FormItem><label htmlFor="price"></label></FormItem>
+                    <input onChange={this.handleChange} type="text" name="price" placeholder="price" value={this.state.price} />
                 </div>
                 <button>Submit</button>
             </form>
+            </FormContainer>
         );
     }
 }
-
 export default ItemForm;

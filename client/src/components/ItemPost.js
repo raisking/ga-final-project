@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './css/itemPost.css'
-import Users from './Users'
-
+import UserBid from './UserBid'
+import { Redirect } from 'react-router'
 
 class ItemPost extends Component {
     state = {
-        items: []
+        items: [],
+        redirectToItem: false
     }
     componentWillMount() {
         const itemId = this.props.match.params.id
@@ -25,13 +26,15 @@ class ItemPost extends Component {
             console.log(error)
         }
     }
-    deletePost = async (itemId) => {
-        const res = await axios.delete(`/api/items/${itemId}`)
-        const deletedItems = [...this.state.items]
-        deletedItems.pop(res.data)
-        this.setState({
-            items: deletedItems})
-    }
+
+    // deletePost = async (itemId) => {
+    //     const res = await axios.delete(`/api/items/${itemId}`)
+    //     const deletedItems = [...this.state.items]
+    //     deletedItems.pop(res.data)
+    //     this.setState({
+    //         items: deletedItems})
+    // }
+
     render() {
         return (
             <div>
@@ -49,11 +52,11 @@ class ItemPost extends Component {
                         <p>Contact Seller</p>
                         <p>Print This Page</p>
                         <p>Share This Product</p>
-                        <button>Edit</button>
-                        <button onClick={() => this.deletePost()}>Delete</button>           
+                        
+                   
                     </div>
                     <div class="Wrapper-Flex">
-                        <Users />   
+                        <UserBid />   
                     </div>
                 </div>
             </div>

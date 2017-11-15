@@ -26,24 +26,26 @@ class UserForm extends Component {
         await axios.post('/api/users', payload)
         await this.props.getAllUsers()
     }
+
+
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div class="WrapperUserForm">
                     <div class="UserForm">
                         <div>
-                           <div><label htmlFor="name" ></label></div>
+                           <div><label htmlFor="na  me" ></label></div>
                                 <input onChange={this.handleChange} type="text" 
                                 name="name" placeholder="Name" value={this.state.name} />
                         </div>
                         <div>
-                            <div><label htmlFor="name" ></label></div>
+                            <div><label htmlFor="price" ></label></div>
                                 <input onChange={this.handleChange} type="text" 
-                                name="bid_amount" placeholder="Category"     value={this.state.bid_amount} />
+                                name="bid_amount" placeholder="Price" value={this.state.bid_amount} />
                         </div>
                     </div>
                 </div>
-                <button>Submit</button>
+                <button>Bid</button>
             </form>
         );
     }

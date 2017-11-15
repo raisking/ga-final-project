@@ -43,14 +43,26 @@ class Api::ItemsController < ApplicationController
     }
   end
 
-#   def update
-#     #get the item id from the url params
-#     item_id = params[:id]
-#     @item = Item.find_by_id(item_id)
-#     item_params = params.require(:item).permit(:name, :address, :email, telephone:, :bid_amount)
-#     @item.update_attributes(item_params)
-#     render json: @item
-#   end
+  def update 
+    item_id = params[:id]
+    @item = Item.find_by_id(item_id)
+    item_params = params.require(:item).permit(:name, :category, :image, :price)
+    #update the item
+    @item.update_attributes(item_params)
+    render json: @item
+  end
+  def update
+    item_id = params[:id]
+    @item = Item.find_by_id(item_id)
+    @item.update_attributes(item_params)    
+    render json: @item
+  end
+
+  private
+  def item_params
+    params.require(:item).permit(:name, :category, :image, :price)
+  end
+  
 end
 
-    
+ 

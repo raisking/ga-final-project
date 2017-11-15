@@ -29,7 +29,9 @@ class Items extends Component {
             items: deletedItems})
     }   
 
-    render() {
+
+    
+    render() {  
         return (
             <div>
                 <h1>Online Auto Auction</h1>
@@ -47,8 +49,10 @@ class Items extends Component {
                                 <Link key={item._id} to={`/items/${item.id}`}>
                                     <button className="bid_now">Bid Now</button>
                                 </Link>
-                                <button onClick={() => this.deleteItem(item.id)}>Delete</button>         
+                                <button onClick={() => this.deleteItem(item.id)}>Delete</button> 
+                                <Link key = {item._id} to={`/items/${item.id}/edit`}>        
                                 <button>Edit</button>      
+                                </Link>
                             </div>
                         </div>
                     ))}

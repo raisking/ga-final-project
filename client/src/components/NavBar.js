@@ -36,6 +36,9 @@ class NavBar extends Component {
               <Items>
               <Link to = {"/LoginPage"}>Login</Link>
               </Items>
+              <Items>
+              <Link to = {"/NewUser"}>Account</Link>
+              </Items>
         </Container>
         );
     }

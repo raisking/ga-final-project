@@ -1,0 +1,13 @@
+
+.outerDiv{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-left: 400px;
+}
+.innerDiv{
+    border: 1px solid red;  
+    width: 50%;
+    margin: 10px;
+}

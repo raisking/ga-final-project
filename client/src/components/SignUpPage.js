@@ -17,7 +17,7 @@ const BtnContainer = styled.div`
 class SignUpPage extends Component {
     state = {
         items: [],
-        showNewForm: false
+        showNewForm: true
     }
     componentWillMount() {
         this.getAllItems()

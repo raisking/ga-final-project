@@ -20,10 +20,27 @@ Item.create({name: "2017 BMW 328 d",
     image: 'https://img2.carmax.com/img/vehicles/15279289/1/v-0x8d5260e4c61b048/1276.jpg', 
     price: "$36,998" })
 
+Item.create({name: "2017 Lexus LS 460", 
+    category: "Lexus", 
+    image: 'https://img2.carmax.com/img/vehicles/15055436/1/v-0x8d522cf5ddeb302/1276.jpg', 
+    price: "$68,998" })
+
+Item.create({name: "2017 Lexus ES 350", 
+    category: "Lexus", 
+    image: 'https://img2.carmax.com/img/vehicles/15253877/1/v-0x8d527e9d63eae4b/1276.jpg', 
+    price: "$39,998" })
+
+Item.create({name: "2016 Lexus RC 350", 
+    category: "Lexus", 
+    image: 'https://img2.carmax.com/img/vehicles/15130620/1/v-0x8d51ae6a470118c/1276.jpg', 
+    price: "$40,998" })
+
+
 User.create({
     name:"Barrack Obama",
     address: "Chicago",
     email: "obama@gmail.com",
-    telephone: "333 334455",
+    telephone: "333334455",
+    image: 'https://i.ytimg.com/vi/WQGJAIYtWD4/maxresdefault.jpg',
     bid_amount: "$17,444"
 })

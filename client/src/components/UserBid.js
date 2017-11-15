@@ -4,10 +4,10 @@ import UserForm from './UserForm'
 import './css/Users.css'
 
 
-class Users extends Component {
+class UserBid extends Component {
     state ={
         users: [],
-        showNewForm: false
+        showNewForm: true
     }
     componentWillMount(){
         this.getAllUsers() 
@@ -38,4 +38,4 @@ class Users extends Component {
     }
 }
         
-export default Users;
+export default UserBid;

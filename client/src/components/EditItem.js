@@ -1,44 +1,85 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-import ItemForm from './ItemForm'
+import axios from 'axios';
 import styled from 'styled-components'
-import "./css/SignUpPage.css"
+import { Redirect } from 'react-router'
 
-const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    margin: 30px;
+const FormItem = styled.div`
+display: block;
 `
-const BtnContainer = styled.div`   
-    padding: 20px;
+const EditWrapper = styled.div`
+display: flex;
+justify-content: center;
 `
-
-class SignUpPage extends Component {
+class EditItem extends Component {
     state = {
-        items: [],
-        showNewForm: false
+        item: {},
+        redirectToItem: false
     }
     componentWillMount() {
-        this.getAllItems()
+        this.getAllIems()
     }
-    getAllItems = async () => {
-        const res = await axios.get('/api/items')
-        this.setState({ items: res.data })
+
+    getAllIems = async () => {
+        const itemId = this.props.match.params.id
+        const res = await axios.get(`/api/items/${itemId}`)
+        console.log(res.data)
+        this.setState({ item: res.data })
     }
-    toggleShowNewForm = () => {
-        this.setState({ showNewForm: !this.state.showNewForm })
+
+    handleChange = (event) => {
+        const name = event.target.name
+        const newState = { ...this.state.item }
+        newState[name] = event.target.value
+        this.setState({item: newState})
+   
+
     }
+
+    handleUpdate = async (event) => {
+        event.preventDefault()
+        const itemId = this.props.match.params.id
+        const res = await axios.patch(`/api/items/${itemId}`,{
+            item: this.state.item 
+            
+        })
+        console.log(res)
+        this.setState({item: res.data})
+        this.setState({redirectToItem: true})
+    }
+
+
     render() {
-        return (
-            <Container>
-                <div class ="BtnWrapper">
-                    <BtnContainer>
-                        <button onClick={this.toggleShowNewForm}>Add New Item</button>
-                        {this.state.showNewForm ? <ItemForm getAllItems={this.getAllItems} /> : null}
-                    </BtnContainer>
-                </div>
-            </Container>
+        // const {itemId}= this.props.match.params
+        if (this.state.redirectToItem){
+            return <Redirect to={`/`}/>
+        }
+        return (    
+            <div>  
+                <h1>Edit Page</h1>
+                    <EditWrapper>
+                        <form onSubmit={this.handleUpdate}>
+                            <div>
+                                <FormItem><label htmlFor="name"></label></FormItem>
+                                <input onChange ={this.handleChange} type="text" name="name" value={this.state.item.name} />
+                            </div>
+                            <div>
+                                <FormItem><label htmlFor="category"></label></FormItem>
+                                <input onChange ={this.handleChange}type="text" name="category" value={this.state.item.category} />
+                            </div>
+                            <div>
+                                <FormItem> <label htmlFor="image"></label></FormItem>
+                                <input onChange ={this.handleChange}type="url" name="image" value={this.state.item.image} />
+                            </div>
+                            <div>
+                                <FormItem><label htmlFor="price"></label></FormItem>
+                                <input onChange ={this.handleChange}type="text" name="price" value={this.state.item.price} />
+                            </div>
+                            <input type='submit' value='Submit' />
+                        </form>
+                    </EditWrapper>
+            </div>
         );
     }
 }
-export default SignUpPage;
+
+export default EditItem;

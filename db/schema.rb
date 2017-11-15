@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20171113222022) do
     t.string "email"
     t.string "telephone"
     t.string "bid_amount"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

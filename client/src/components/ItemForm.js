@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
+import { Redirect } from 'react-router-dom'
 
 const FormContainer = styled.div`
     
@@ -42,9 +43,12 @@ class ItemForm extends Component {
         }
         await axios.post('/api/items', payload)
         await this.props.getAllItems()
+        this.setState({redirectToItem: true})
     }
 
     render() {
+        
+        
         return (
             <FormContainer>
             <form onSubmit={this.handleSubmit}>

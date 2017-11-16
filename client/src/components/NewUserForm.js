@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import './css/NewUserForm.css'
-
+7
 class NewUserForm extends Component {
     state = {
         name: '',
@@ -54,10 +54,10 @@ class NewUserForm extends Component {
                 <div>
                     <div><label htmlFor="telephone">Telephone: </label></div>
                     <input onChange={this.handleChange} type="text" name="telephone" value={this.state.telephone} />
-                </div>
+                </div> 
                 <div>
-                    <div><label htmlFor="image">Image: </label></div>
-                    <input onChange={this.handleChange} type="url" name="image" value={this.state.image} />
+                  <div> <label htmlFor="image">Image: </label></div>
+                    <input onChange={this.handleChange} type="url" name="image"  value={this.state.image} />
                 </div>
                 <button>Submit</button>
             </form>

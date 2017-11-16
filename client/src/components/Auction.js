@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import UserBidForm from './UserBidForm'
+import AuctionForm from './AuctionForm'
 import './css/UserBid.css'
 
 
-class UserBid extends Component {
-    state ={
-        users: [],
+class Auction extends Component {
+    state = {
+        auctions: [],
         showNewForm: true
     }
     componentWillMount(){
-        this.getAllUsers() 
+        this.getAllAuctions()
     }
-    getAllUsers = async () => {
-        const res = await axios.get('/api/users')
-        this.setState({users: res.data})
+    getAllAuctions = async () => {
+        const res = await axios.get('/api/auctions')
+        this.setState({auctions: res.data})
     }
-    toggleShowNewForm = ()=> {
+    toggleShowNewForm = () => {
         this.setState({showNewForm: !this.state.showNewForm})
     }
     render() {
@@ -24,11 +24,12 @@ class UserBid extends Component {
             <div>
                 <h3>Must bid higher than current bid</h3>
                 <button onClick ={this.toggleShowNewForm}>Place Bid</button>
-                {this.state.showNewForm ? <UserBidForm getAllUsers={this.getAllUsers}/> : null}
-                {this.state.users.map(user => (
+                {this.state.showNewForm ? <AuctionForm getAllAuctions={this.getAllAuctions}/> : null}
+
+                {this.state.auctions.map(auction => (
                     <div class="bid_Wrapper">
-                        <p>{user.name}</p>
-                        <p>${user.bid_amount}</p>
+                        <p>{auction.name}</p>
+                        <p>${auction.amount}</p>
                     </div>
                     
                 ))}
@@ -37,5 +38,5 @@ class UserBid extends Component {
         );
     }
 }
-        
-export default UserBid;
+
+export default Auction;

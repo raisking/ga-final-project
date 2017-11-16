@@ -12,7 +12,10 @@ Rails.application.routes.draw do
     get "/users/:id", to: "users#show", as: "user"
     delete "/users/:id", to: "users#destroy"
       
-
+    get "/auctions", to: "auctions#index", as: "auctions"
+    post "/auctions", to: "auctions#create"
+    get "/auctions/:id", to: "auctions#show", as: "auction"
+    
   end
  
 

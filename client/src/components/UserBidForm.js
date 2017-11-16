@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './css/UserForm.css'
 
-class UserForm extends Component {
+class UserBidForm extends Component {
     state = {
         name: '',
         address: '',
@@ -50,4 +50,4 @@ class UserForm extends Component {
         );
     }
 }
-export default UserForm;
+export default UserBidForm;

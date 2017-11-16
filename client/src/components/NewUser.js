@@ -19,13 +19,21 @@ class NewUser extends Component {
     toggleShowNewForm = () => {
         this.setState({ showNewForm: !this.state.showNewForm })
     }
-    removeUser = async(userId) => {
-        const res = await axios.delete(`/api/users/${userId}`)
-        const removeUsers = [...this.state.users]
-        console.log(removeUsers)
-        removeUsers.pop(res.data)
-        this.setState({ users: removeUsers})
-    }
+    // deleteUser = async(userId) => {
+    //     const res = await axios.delete(`/api/users/${userId}`)
+    //     const removeUsers = [...this.state.users]
+    //     console.log(removeUsers)
+    //     removeUsers.pop(res.data)
+    //     this.setState({ users: removeUsers})
+    // }
+    deleteUser = async (userId) => {
+        const res = await axios.delete(`/api/items/${userId}`)
+        const deletedUsers = [...this.state.users]
+        console.log(deletedUsers)
+        deletedUsers.pop(res.data)
+        this.setState({
+            users: deletedUsers})
+    }   
 
     render() {
         return (
@@ -34,12 +42,13 @@ class NewUser extends Component {
         
                 {this.state.users.map(user => (
                     <div className="innerDiv">
-                        <img src={user.image} alt="User Photo" />
+                        <img src={user.image} alt="Car" />
                         <p>Name: {user.name}</p>
                         <p>Address:{user.address}</p>
                         <p>Email:{user.email}</p>
                         <p>Telephone:{user.telephone}</p>
-                        <button onClick={() => this.removeUser(user.id)}>Delete</button> 
+
+                        <button onClick={() => this.deleteUser(user.id)}>Delete</button> 
                         <button>
                         <Link key = {user._id} to={`/users/${user.id}/SignUpPage`}>Add New Item</Link>
                         </button>

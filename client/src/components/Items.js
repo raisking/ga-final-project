@@ -39,7 +39,7 @@ class Items extends Component {
                     {this.state.items.map(item => (
                         <div className="container">
                             <div>
-                                <img src={item.image} alt="Car" />
+                                <img className="itemImg" src={item.image} alt="Car" />
                             </div>
                             <div className="label">
                                 <h3>{item.name}</h3>

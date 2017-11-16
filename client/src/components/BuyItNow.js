@@ -4,9 +4,8 @@ import './css/itemPost.css'
 import UserBid from './UserBid'
 import { Redirect } from 'react-router'
 import { Link } from 'react-router-dom'
-import Auction from './Auction'
 
-class ItemPost extends Component {
+class BuyItNow extends Component {
     state = {
         items: [],
         redirectToItem: false
@@ -28,38 +27,33 @@ class ItemPost extends Component {
             console.log(error)
           
         }
-    }
-        
+    }   
     render() {
 
         return (
             <div>
-                <div class="countDown">
-                <h1>Count Down </h1>
-                </div>
+    
+                <h2>CheckOut</h2>
+             
                 <div id="wrapper">
                     <div class="Wrapper-Flex">
                         <h2>{this.state.items.name} </h2>
                         <img src={this.state.items.image} alt="Car"/>
                         <p>{this.state.items.name}</p>
                         <p>{this.state.items.category}</p>
-                        <p>Current Price: {this.state.items.price}</p>
-                        <p class="freeshipping">FREE SHIPPING</p>
-                        <p>Contact Seller</p>
-                        <p>Print This Page</p>
-                        <p>Share This Product</p>
+                        <p>Total:{this.state.items.price}</p>
+                
 
                        <Link key={this.state.items._id} to={`/items/${this.state.items.id}/BuyItNow`}>
-                       <button>Buy It Now</button>
+                       <button>Place your order</button>
                        </Link>
                     </div>
                     <div class="Wrapper-Flex">
-                        <Auction />  
-                        {/* <UserBid/> */}
+                     
                     </div>
                 </div>
             </div>
         );
     }
 }
-export default ItemPost;
+export default BuyItNow;

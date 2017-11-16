@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 Item.create({name: "2015 Audi A3 Premium Plus", 
     category: "Audi", 
     image: 'https://img2.carmax.com/img/vehicles/15092839/1/v-0x8d511d54bb53b9c/1276.jpg', 
@@ -44,19 +37,8 @@ User.create({
     image: 'https://i.ytimg.com/vi/WQGJAIYtWD4/maxresdefault.jpg',
     bid_amount: "17,444"
 })
-User.create({
-    name:"Barrack Obama",
-    address: "Chicago",
-    email: "obama@gmail.com",
-    telephone: "333334455",
-    image: 'https://i.ytimg.com/vi/WQGJAIYtWD4/maxresdefault.jpg',
-    bid_amount: "17,444"
-})
-User.create({
-    name:"Barrack Obama",
-    address: "Chicago",
-    email: "obama@gmail.com",
-    telephone: "333334455",
-    image: 'https://i.ytimg.com/vi/WQGJAIYtWD4/maxresdefault.jpg',
-    bid_amount: "17,444"
+
+Auction.create({
+    name: "Burns",
+    amount: "30,999"
 })

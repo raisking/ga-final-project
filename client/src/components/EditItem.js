@@ -40,15 +40,13 @@ class EditItem extends Component {
         event.preventDefault()
         const itemId = this.props.match.params.id
         const res = await axios.patch(`/api/items/${itemId}`,{
-            item: this.state.item 
-            
+            item: this.state.item     
         })
         console.log(res)
         this.setState({item: res.data})
         this.setState({redirectToItem: true})
     }
-
-
+    
     render() {
         // const {itemId}= this.props.match.params
         if (this.state.redirectToItem){
@@ -75,7 +73,7 @@ class EditItem extends Component {
                                 <FormItem><label htmlFor="price"></label></FormItem>
                                 <input onChange ={this.handleChange}type="text" name="price" value={this.state.item.price} />
                             </div>
-                            <input type='submit' value='Submit' />
+                           <input type='submit' value='Submit' />
                         </form>
                     </EditWrapper>
             </div>

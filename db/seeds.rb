@@ -39,6 +39,6 @@ User.create({
 })
 
 Auction.create({
-    name: "Burns",
+    name: "James",
     amount: "30,999"
 })

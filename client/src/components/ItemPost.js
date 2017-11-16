@@ -43,7 +43,7 @@ class ItemPost extends Component {
                         <img src={this.state.items.image} alt="Car"/>
                         <p>{this.state.items.name}</p>
                         <p>{this.state.items.category}</p>
-                        <p>Current Price: {this.state.items.price}</p>
+                        <p>Price: {this.state.items.price}</p>
                         <p class="freeshipping">FREE SHIPPING</p>
                         <p>Contact Seller</p>
                         <p>Print This Page</p>

@@ -32,7 +32,9 @@ class SignUpPage extends Component {
     render() {  
         return (
             <Container>
+       
                 <div class ="BtnWrapper">
+                <h2>Add</h2>
                     <BtnContainer>
                         <button onClick={this.toggleShowNewForm}>Add New Item</button>
                         {this.state.showNewForm ? <ItemForm getAllItems={this.getAllItems} /> : null}

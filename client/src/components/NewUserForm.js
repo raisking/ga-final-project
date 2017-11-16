@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
+import './css/NewUserForm.css'
 
 class NewUserForm extends Component {
     state = {
@@ -7,7 +9,8 @@ class NewUserForm extends Component {
         address: '',
         email: '',
         telephone: '',
-        image: ''
+        image: '',
+        redirectToUserProfile: false
     }
     handleChange = (event) => {
         const name = event.target.name
@@ -21,35 +24,39 @@ class NewUserForm extends Component {
             name: this.state.name,
             address: this.state.address,
             email: this.state.email,
-            // telephone: this.state.telephone,
-            // image: this.state.image
+            telephone: this.state.telephone,
+            image: this.state.image
         }
         await axios.post('/api/users', payload)
         await this.props.getAllUsers()
+        this.setState({redirectToUserProfile: true})
     }
 
 
     render() {
+        if(this.state.redirectToUserProfile){
+            return<Redirect to={'/NewUser'}/>
+        }
         return (
             <form onSubmit={this.handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name: </label>
+                <div className ="itemForm">
+                    <div><label htmlFor="name">Name: </label></div>
                     <input onChange={this.handleChange} type="text" name="name" value={this.state.name} />
                 </div>
                 <div>
-                    <label htmlFor="address">Address: </label>
+                    <div><label htmlFor="address">Address: </label></div>
                     <input onChange={this.handleChange} type="text" name="address" value={this.state.address} />
                 </div>
                 <div>
-                    <label htmlFor="email">Email: </label>
+                    <div><label htmlFor="email">Email: </label></div>
                     <input onChange={this.handleChange} type="text" name="email" value={this.state.email} />
                 </div>
                 <div>
-                    <label htmlFor="email">Telephone: </label>
+                    <div><label htmlFor="telephone">Telephone: </label></div>
                     <input onChange={this.handleChange} type="text" name="telephone" value={this.state.telephone} />
                 </div>
                 <div>
-                    <label htmlFor="email">Image: </label>
+                    <div><label htmlFor="image">Image: </label></div>
                     <input onChange={this.handleChange} type="url" name="image" value={this.state.image} />
                 </div>
                 <button>Submit</button>

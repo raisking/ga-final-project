@@ -1,6 +1,8 @@
 .bid_Wrapper{
-    background-color: #ccc;
-    box-shadow: 2px 2px 2px rgb(25, 25, 26);
+    /* background-color: #ccc; */
+    /* box-shadow: 1px 1px 1px rgb(25, 25, 26); */
+    border-bottom: 1px solid #000;
+    margin-top: 10px;
     padding-left: 5px;
 }
 .bid_now{

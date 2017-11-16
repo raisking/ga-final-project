@@ -18,5 +18,13 @@ class Api::UsersController < ApplicationController
         @user = User.find_by_id(user_id)
         render json: @user
     end
+    def destroy
+        user_id = params[:id]
+        @user = Item.find_by_id(item_id)
+        @user.destroy
+        render json: {
+            msg: "Successfully Deteled"
+        }
+    end
 
 end

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post "/users", to: "users#create"
     get "/users", to: "users#index"
     get "/users/:id", to: "users#show", as: "user"
+    delete "/users/:id", to: "users#destroy"
       
 
   end

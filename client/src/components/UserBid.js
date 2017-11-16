@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import UserForm from './UserForm'
-import './css/Users.css'
+import './css/UserBid.css'
 
 
 class UserBid extends Component {
@@ -28,7 +28,7 @@ class UserBid extends Component {
                 {this.state.users.map(user => (
                     <div class="bid_Wrapper">
                         <p>{user.name}</p>
-                        <p>{user.bid_amount}</p>
+                        <p>${user.bid_amount}</p>
                     </div>
                     
                 ))}

@@ -9,6 +9,8 @@ h1{
 }
 body{
     font-family: 'Karla', sans-serif;
+    background-image: url("http://www.psdgraphics.com/file/crumpled-paper.jpg");
+    background-repeat: no-repeat;
 }
 .freeshipping{
     color: #cc352b;
@@ -25,13 +27,13 @@ body{
  
 }
 .container{
-    border: 1px solid rgb(99, 30, 30); 
+    border: 1px solid rgb(195, 214, 200); 
     background-color: rgb(255, 255, 255);
     margin: 20px;
     width: 300px;
     height: auto;
     padding: 0;  
-    box-shadow: 2px 2px 2px 4px #ccc;
+    box-shadow: 2px 2px 2px 2px #ccc;
 }
 button {
     background: #1a4f72;

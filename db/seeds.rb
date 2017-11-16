@@ -42,5 +42,21 @@ User.create({
     email: "obama@gmail.com",
     telephone: "333334455",
     image: 'https://i.ytimg.com/vi/WQGJAIYtWD4/maxresdefault.jpg',
-    bid_amount: "$17,444"
+    bid_amount: "17,444"
+})
+User.create({
+    name:"Barrack Obama",
+    address: "Chicago",
+    email: "obama@gmail.com",
+    telephone: "333334455",
+    image: 'https://i.ytimg.com/vi/WQGJAIYtWD4/maxresdefault.jpg',
+    bid_amount: "17,444"
+})
+User.create({
+    name:"Barrack Obama",
+    address: "Chicago",
+    email: "obama@gmail.com",
+    telephone: "333334455",
+    image: 'https://i.ytimg.com/vi/WQGJAIYtWD4/maxresdefault.jpg',
+    bid_amount: "17,444"
 })

@@ -34,7 +34,7 @@ class UserForm extends Component {
                 <div class="WrapperUserForm">
                     <div class="UserForm">
                         <div>
-                           <div><label htmlFor="na  me" ></label></div>
+                           <div><label htmlFor="name" ></label></div>
                                 <input onChange={this.handleChange} type="text" 
                                 name="name" placeholder="Name" value={this.state.name} />
                         </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
 import { Redirect } from 'react-router'
+import './css/EditItem.css'
 
 const FormItem = styled.div`
 display: block;
@@ -54,7 +55,7 @@ class EditItem extends Component {
             return <Redirect to={`/`}/>
         }
         return (    
-            <div>  
+            <div className="editContainer">  
                 <h1>Edit Page</h1>
                     <EditWrapper>
                         <form onSubmit={this.handleUpdate}>

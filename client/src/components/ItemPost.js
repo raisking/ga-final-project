@@ -26,20 +26,12 @@ class ItemPost extends Component {
             console.log(error)
         }
     }
-
-    // deletePost = async (itemId) => {
-    //     const res = await axios.delete(`/api/items/${itemId}`)
-    //     const deletedItems = [...this.state.items]
-    //     deletedItems.pop(res.data)
-    //     this.setState({
-    //         items: deletedItems})
-    // }
-
+        
     render() {
         return (
             <div>
                 <div class="countDown">
-                <h1>Count Down: </h1>
+                <h1>Count Down </h1>
                 </div>
                 <div id="wrapper">
                     <div class="Wrapper-Flex">

@@ -24,7 +24,8 @@ class ItemForm extends Component {
         name: '',
         category: '',
         image: '',
-        price: ''
+        price: '',
+        redirectToItem: false
     }
     handleChange = (event) => {
         const name = event.target.name
@@ -47,7 +48,9 @@ class ItemForm extends Component {
     }
 
     render() {
-        
+        if(this.state.redirectToItem){
+            return<Redirect to={'/'}/>  
+        }
         
         return (
             <FormContainer>

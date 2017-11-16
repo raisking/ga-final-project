@@ -1,13 +1,20 @@
 
 .outerDiv{
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  flex-direction: column;
-
-  margin-left: 400px;
+  flex-direction: column; */
+  margin-left: 250px;
 }
 .innerDiv{
-    border: 1px solid red;  
+
     width: 50%;
     margin: 10px;
+    padding: 30px;  
+    border: 1px solid rgb(195, 214, 200); 
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+a{
+  color: #fff;
+  text-decoration: none;
 }

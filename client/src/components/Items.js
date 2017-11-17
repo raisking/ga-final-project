@@ -33,7 +33,7 @@ class Items extends Component {
     
     render() {  
         return (
-            <div>
+            <div className="itemsContainerWrapper">
                 <h1>Auto Auction</h1>
                 <div className="WrapperFlex">
                     {this.state.items.map(item => (

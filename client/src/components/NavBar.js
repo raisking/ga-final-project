@@ -14,7 +14,7 @@ class NavBar extends Component {
                     <Link to="/">Home</Link>
                 </div>
                 <div className="itemNavBar">
-                    <Link to={"/SignUpPage"}>Sign Up</Link>
+                    {/* <Link to={"/SignUpPage"}>Sign Up</Link>  */}
                 </div>
                 <div className="itemNavBar">
                     <Link to={"/LoginPage"}>Login</Link>

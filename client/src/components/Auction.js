@@ -22,7 +22,7 @@ class Auction extends Component {
     render() {
         return (
             <div>
-                <h3>Must bid higher than current bid</h3>
+                {/* <h3>Must bid higher than current bid</h3> */}
                 <button onClick ={this.toggleShowNewForm}>Place Bid</button>
                 {this.state.showNewForm ? <AuctionForm getAllAuctions={this.getAllAuctions}/> : null}
 

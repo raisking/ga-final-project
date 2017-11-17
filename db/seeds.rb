@@ -87,11 +87,11 @@ Item.create({name: "2014 BMW 328 XI",
     price: "$25,998" })
 
 User.create({
-    name:"Mike Tyson",
+    name:"Will Smith",
     address: "New York",
-    email: "miketyson@gmail.com",
+    email: "willsmith@gmail.com",
     telephone: "333334455",
-    image: 'https://static.vibe.com/files/2014/04/Mike-Tyson-531x400.jpg',
+    image: 'http://www2.pictures.zimbio.com/gi/Will+Smith+Jada+Pinkett+Smith+didawq56qySm.jpg',
     bid_amount: "17,444"
 })
 

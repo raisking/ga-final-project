@@ -35,14 +35,14 @@ class ItemPost extends Component {
         return (
             <div>
                 <div class="countDown">
-                <h1>Count Down </h1> 
+                <h2>Count Down </h2> 
                 </div>
                 <div id="wrapper">
                     <div class="Wrapper-Flex">
                         <h2>{this.state.items.name} </h2>
                         <img src={this.state.items.image} alt="Car"/>
                         <p>{this.state.items.name}</p>
-                        <p>{this.state.items.category}</p>
+                        <p>Brand: {this.state.items.category}</p>
                         <p>Price: {this.state.items.price}</p>
                         <p class="freeshipping">FREE SHIPPING</p>
                         <a href="#"><p>Contact Seller</p></a>

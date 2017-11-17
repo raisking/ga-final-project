@@ -25,3 +25,7 @@ p{
   border-bottom: 1px solid #ccc;
   padding: 5px;
 }
+.innerDiv img{
+  border: 1px solid #000;
+  box-shadow: 1px 1px 1px 1px rgb(95, 110, 170);
+}

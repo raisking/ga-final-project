@@ -10,6 +10,7 @@
     border: 1px solid rgb(195, 214, 200); 
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 1px 1px 1px #ccc;
+    padding: 60px;
 }
 .Wrapper-Flex{ 
      width: 300px;
@@ -42,8 +43,12 @@ h2{
     box-shadow: 1px 1px 1px 1px #ccc;
 }
 .Wrapper-Flex a{
-    color: #000;
+    color: rgb(37, 48, 202);
 }
 .Wrapper-Flex a:hover{
     color: rgb(202, 15, 15);
+}
+.Wrapper-Flex img {
+    border: 1px solid rgb(14, 12, 12);
+    box-shadow: 1px 1px 1px 1px rgb(95, 110, 170);
 }

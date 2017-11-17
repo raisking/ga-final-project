@@ -22,7 +22,6 @@ class UserBid extends Component {
     render() {
         return (
             <div>
-           
                 <button onClick ={this.toggleShowNewForm}>Place Bid</button>
                 {this.state.showNewForm ? <UserBidForm getAllUsers={this.getAllUsers}/> : null}
                 {this.state.users.map(user => (

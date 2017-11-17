@@ -34,7 +34,7 @@ class Footer extends Component {
                 </div>
                 <div className="developer">
                     <h4>Copyright@2017</h4>
-                    <h4>Developed & Design by <spam class="me"><a href="http://www.raiprakash.com/" target="_blank">Prakash Rai</a></spam></h4>
+                    {/* <h4>Developed & Design by <spam class="me"><a href="http://www.raiprakash.com/" target="_blank">Prakash Rai</a></spam></h4> */}
                 </div>
             </div>
         );

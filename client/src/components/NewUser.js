@@ -45,9 +45,9 @@ class NewUser extends Component {
                             <img src={user.image} atl="Profile Picture" />
                         </div>
                         <p>Name: {user.name}</p>
-                        <p>Address:{user.address}</p>
-                        <p>Email:{user.email}</p>
-                        <p>Telephone:{user.telephone}</p>
+                        <p>Address: {user.address}</p>
+                        <p>Email: {user.email}</p>
+                        <p>Telephone: {user.telephone}</p>
 
                         <button onClick={() => this.deleteUser(user.id)}>Delete</button>
                         <button>

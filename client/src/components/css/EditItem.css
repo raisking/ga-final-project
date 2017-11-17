@@ -33,6 +33,6 @@ input{
     height: 30px;
     width: 280px;
     padding-left: 10px;
-    border-radius: 8px;
+    border-radius: 0 25px 25px 0 !important;    
     box-shadow: 1px 1px 1px 1px #ccc;
 }

@@ -4,8 +4,7 @@
     justify-content: flex-end;
     margin: 0;
     padding: 20px;
-  
-      
+    box-shadow: 1px 1px 1px 2px rgb(139, 110, 150);
     }      
     a {
         text-decoration: none;
@@ -21,4 +20,38 @@
     }
 .itemNavBarRight{
   padding-right: 800px;
+}
+.footerDivClass{
+    display: flex;
+    justify-content: center;
+    
+ 
+}
+.footerInside{
+    /* border: 1px solid red; */
+    padding-left: 150px;
+    
+}
+.footerCopyRight{
+   margin-left: auto;
+   margin-right: auto;  
+   border: 1px solid #ccc;
+   background: linear-gradient(to bottom, #c4c0c0 16%, #666699 92%);    
+   opacity: .7;
+}
+.developer{
+    
+    text-align: center;
+
+    
+}
+.footerInside p {
+    margin-top: -20px;
+
+}
+.developer h4{
+    margin-top: -5px;
+}
+.footerInside h3 {
+    color: rgb(23, 54, 102);
 }

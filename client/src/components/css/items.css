@@ -34,7 +34,7 @@ body{
     width: 300px;
     height: auto;
     padding: 0;  
-    box-shadow: 1px 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px 1px rgb(192, 206, 183);
 }
 button {
     background: #1a4f72;

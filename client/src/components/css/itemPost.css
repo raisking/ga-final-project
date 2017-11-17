@@ -1,11 +1,15 @@
 #wrapper{
-    width: 65%; 
+    width: 85%; 
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 30px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: space-around;  
+    border: 1px solid rgb(195, 214, 200); 
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 1px 1px #ccc;
 }
 .Wrapper-Flex{ 
      width: 300px;
@@ -23,4 +27,23 @@ img{
 
 h2{
     text-align: center;
+}
+#wrapperItemPost{
+    width: 50%; 
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-bottom: 20px;   
+    display: flex;
+    justify-content: space-around;  
+    border: 1px solid rgb(195, 214, 200); 
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+.Wrapper-Flex a{
+    color: #000;
+}
+.Wrapper-Flex a:hover{
+    color: rgb(202, 15, 15);
 }

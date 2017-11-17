@@ -35,7 +35,7 @@ class BuyItNow extends Component {
     
                 <h2>CheckOut</h2>
              
-                <div id="wrapper">
+                <div id="wrapperItemPost">
                     <div class="Wrapper-Flex">
                         <h2>{this.state.items.name} </h2>
                         <img src={this.state.items.image} alt="Car"/>

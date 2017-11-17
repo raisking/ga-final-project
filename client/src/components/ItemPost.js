@@ -35,7 +35,7 @@ class ItemPost extends Component {
         return (
             <div>
                 <div class="countDown">
-                <h1>Count Down </h1>
+                <h1>Count Down </h1> 
                 </div>
                 <div id="wrapper">
                     <div class="Wrapper-Flex">
@@ -45,9 +45,9 @@ class ItemPost extends Component {
                         <p>{this.state.items.category}</p>
                         <p>Price: {this.state.items.price}</p>
                         <p class="freeshipping">FREE SHIPPING</p>
-                        <p>Contact Seller</p>
-                        <p>Print This Page</p>
-                        <p>Share This Product</p>
+                        <a href="#"><p>Contact Seller</p></a>
+                        <a href="#"><p>Print This Page</p></a>
+                        <a href="#"><p>Share This Product</p></a>
 
                        <Link key={this.state.items._id} to={`/items/${this.state.items.id}/BuyItNow`}>
                        <button>Buy It Now</button>

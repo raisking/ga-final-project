@@ -4,11 +4,14 @@ input{
     font-size: 14px;    
 }
 .WrapperUserForm{
-    border: 1px solid #ccc;
     margin-top: 15px;
     margin-bottom: 15px;    
 }
 .UserForm{
-    border: 1px solid #000;
+    border: 1px solid rgb(206, 197, 197);
     padding: 10px;  
+    border-radius: 8px;
+}
+.UserForm input {
+    width: 250px;
 }

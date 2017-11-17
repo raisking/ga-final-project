@@ -35,7 +35,7 @@ class ItemPost extends Component {
         return (
             <div>
                 <div class="countDown">
-                <h2>Count Down </h2> 
+                <h2>Time left: 12h: 33m: 22s </h2> 
                 </div>
                 <div id="wrapper">
                     <div class="Wrapper-Flex">

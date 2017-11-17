@@ -47,7 +47,7 @@ class Items extends Component {
                                 <p>Starting Price: {item.price}</p>
                                 <p className="freeshipping">FREE SHIPPING</p>
                                 <Link key={item._id} to={`/items/${item.id}`}>
-                                    <button className="bid_now">Bid Now</button>
+                                    <button>Bid Now</button>
                                 </Link>
                                 <button onClick={() => this.deleteItem(item.id)}>Delete</button> 
                                 <Link key = {item._id} to={`/items/${item.id}/edit`}>        

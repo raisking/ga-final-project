@@ -26,7 +26,7 @@ class ItemForm extends Component {
             category: this.state.category,
             image: this.state.image,
             price: this.state.price
-        }
+        } 
         await axios.post('/api/items', payload)
         await this.props.getAllItems()
         this.setState({redirectToItem: true})
@@ -34,6 +34,7 @@ class ItemForm extends Component {
 
     render() {
         if(this.state.redirectToItem){
+            // return<Redirect to={`users/${user.Id}/items/${item.Id}/Show`}/>  
             return<Redirect to={'/'}/>  
         }
         

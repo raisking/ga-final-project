@@ -37,7 +37,7 @@ class Items extends Component {
                 <h1>Auto Auction</h1>
                 <div className="WrapperFlex">
                     {this.state.items.map(item => (
-                        <div className="container">
+                        <div className="containerItems">
                             <div>
                                 <img className="itemImg" src={item.image} alt="Car" />
                             </div>

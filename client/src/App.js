@@ -10,6 +10,7 @@ import NewUser from './components/NewUser'
 import NewUserItem from './components/NewUserItem'
 import BuyItNow from './components/BuyItNow'
 import Footer from './components/Footer'
+import Show from './components/Show'
 import './App.css'
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
             <Route exact path="/users/:id/SignUpPage" component={SignUpPage}/>
             <Route exact path="/users/:id/SignUpPage/NewUserItem/:id" component={NewUserItem}/>
             <Route exact path="/items/:id/BuyItNow" component={BuyItNow}/>
+            <Route exact path="/users/:id/items/:id/show" component ={Show} />
           </Switch>
           <div className ="FooterArea">
           <Footer />

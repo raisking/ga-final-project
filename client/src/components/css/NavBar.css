@@ -1,0 +1,24 @@
+.divNavBar{
+    background-color: 	#4682B4;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 20px;
+  
+      
+    }      
+    a {
+        text-decoration: none;
+        color: #ccc;    
+    }
+    a:hover{
+        color: rgb(235, 95, 95);
+    }
+    .itemNavBar{
+        padding-left: 20px;
+        padding-right: 10px;
+        
+    }
+.itemNavBarRight{
+  padding-right: 800px;
+}

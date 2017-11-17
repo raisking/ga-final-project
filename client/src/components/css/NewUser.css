@@ -10,7 +10,7 @@
 }
 .innerDiv{
 
-    width: 50%;
+    width: 400px;
     margin-bottom: 50px;
     padding: 30px;  
     border: 1px solid rgb(195, 214, 200); 
@@ -20,4 +20,8 @@
 a{
   color: #fff;
   text-decoration: none;
+}
+p{
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
 }

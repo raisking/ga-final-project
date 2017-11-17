@@ -34,7 +34,7 @@ User.create({
     address: "New York",
     email: "miketyson@gmail.com",
     telephone: "333334455",
-    image: 'https://pbs.twimg.com/media/DN98Ml6W4AA_9R1.png',
+    image: 'https://static.vibe.com/files/2014/04/Mike-Tyson-531x400.jpg',
     bid_amount: "17,444"
 })
 

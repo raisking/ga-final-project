@@ -11,7 +11,7 @@ import './css/NavBar.css'
 // text-align: center;
 // `
 
-class Footer extends Component {
+class Footer extends Component {    
     render() {
         return (
             <div className="footerCopyRight">

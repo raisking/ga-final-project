@@ -26,7 +26,8 @@ body{
     padding: 20px;
 }
 .itemsContainerWrapper{
-    min-height: 500px;
+    background-color: #ccc;
+    min-height: 300px;
     height: auto;
 }
 .containerItems{
@@ -52,3 +53,22 @@ button:hover {
 .label{
     padding: 20px;
 }
+ h3{
+    color: rgb(14, 40, 155);
+}
+.imageZoomDiv  img{
+    max-width: 100%;
+    transition: all 0.3s;
+}
+.imageZoomDiv img:hover{
+    transform: scale(1.1);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .imageZoomDiv{
+    position: relative;
+    overflow: hidden;
+  }

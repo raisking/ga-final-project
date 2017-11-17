@@ -4,7 +4,7 @@
     justify-content: flex-end;
     margin: 0;
     padding: 20px;
-    box-shadow: 1px 1px 1px 2px rgb(139, 110, 150);
+    box-shadow: 1px 1px 1px 2px rgb(70, 204, 36);
     }      
     a {
         text-decoration: none;
@@ -33,24 +33,24 @@
     
 }
 .footerCopyRight{
+    padding-top: 30px;
+    padding-bottom: 20px;
    margin-left: auto;
    margin-right: auto;  
    border: 1px solid #ccc;
    background: linear-gradient(to bottom, #c4c0c0 16%, #8b8b8f 92%);    
-   opacity: .7;
+ 
 }
 .developer{
     
-    text-align: center;
-
-    
+    text-align: center; 
 }
 .footerInside p {
-    margin-top: -20px;
+    /* margin-top: -20px; */
 
 }
 .developer h4{
-    margin-top: -5px;
+    margin-top: 15px;
 }
 .footerInside h3 {
     color: rgb(23, 54, 102);

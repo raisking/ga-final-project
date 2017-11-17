@@ -22,7 +22,7 @@ class UserBid extends Component {
     render() {
         return (
             <div>
-                <h3>Must bid higher than current bid</h3>
+           
                 <button onClick ={this.toggleShowNewForm}>Place Bid</button>
                 {this.state.showNewForm ? <UserBidForm getAllUsers={this.getAllUsers}/> : null}
                 {this.state.users.map(user => (

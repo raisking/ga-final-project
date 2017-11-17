@@ -38,7 +38,7 @@ class Items extends Component {
                 <div className="WrapperFlex">
                     {this.state.items.map(item => (
                         <div className="containerItems">
-                            <div>
+                            <div className="imageZoomDiv">
                                 <img className="itemImg" src={item.image} alt="Car" />
                             </div>
                             <div className="label">

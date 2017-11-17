@@ -1,9 +1,6 @@
 
 .content {
-
-  max-height:95vh;
-  
-  
+  height: auto;  
 }
 .FooterArea{
   margin-top: 50px;

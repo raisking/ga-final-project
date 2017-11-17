@@ -15,7 +15,7 @@ class Items extends Component {
     }
     getAllItems = async () => {
         const res = await axios.get('/api/items')
-        this.setState({ items: res.data })
+        this.setState({ items: res.data.reverse()})
     }
     toggleShowNewForm = () => {
         this.setState({ showNewForm: !this.state.showNewForm })
@@ -34,7 +34,7 @@ class Items extends Component {
     render() {  
         return (
             <div>
-                <h1>Online Auto Auction</h1>
+                <h1>Auto Auction</h1>
                 <div className="WrapperFlex">
                     {this.state.items.map(item => (
                         <div className="container">

@@ -31,51 +31,52 @@ class EditItem extends Component {
         const name = event.target.name
         const newState = { ...this.state.item }
         newState[name] = event.target.value
-        this.setState({item: newState})
-   
+        this.setState({ item: newState })
+
 
     }
 
     handleUpdate = async (event) => {
         event.preventDefault()
         const itemId = this.props.match.params.id
-        const res = await axios.patch(`/api/items/${itemId}`,{
-            item: this.state.item     
+        const res = await axios.patch(`/api/items/${itemId}`, {
+            item: this.state.item
         })
         console.log(res)
-        this.setState({item: res.data})
-        this.setState({redirectToItem: true})
+        this.setState({ item: res.data })
+        this.setState({ redirectToItem: true })
     }
-    
+
     render() {
         // const {itemId}= this.props.match.params
-        if (this.state.redirectToItem){
-            return <Redirect to={`/`}/>
+        if (this.state.redirectToItem) {
+            return <Redirect to={`/`} />
         }
-        return (    
-            <div className="editContainer">  
+        return (
+            <div className="editContainer">
                 <h1>Edit Page</h1>
-                    <EditWrapper>
-                        <form onSubmit={this.handleUpdate}>
-                            <div>
-                                <FormItem><label htmlFor="name"></label></FormItem>
-                                <input onChange ={this.handleChange} type="text" name="name" value={this.state.item.name} />
-                            </div>
-                            <div>
-                                <FormItem><label htmlFor="category"></label></FormItem>
-                                <input onChange ={this.handleChange}type="text" name="category" value={this.state.item.category} />
-                            </div>
-                            <div>
-                                <FormItem> <label htmlFor="image"></label></FormItem>
-                                <input onChange ={this.handleChange}type="url" name="image" value={this.state.item.image} />
-                            </div>
-                            <div>
-                                <FormItem><label htmlFor="price"></label></FormItem>
-                                <input onChange ={this.handleChange}type="text" name="price" value={this.state.item.price} />
-                            </div>
-                           <input type='submit' value='Submit' />
-                        </form>
-                    </EditWrapper>
+                <div className="itemCont">
+                    <form onSubmit={this.handleUpdate}>
+                        <div>
+                            <div><label htmlFor="name">Name</label></div>
+                            <input onChange={this.handleChange} type="text" name="name" value={this.state.item.name} />
+                        </div>
+                        <div>
+                            <div><label htmlFor="category">Category</label></div>
+                            <input onChange={this.handleChange} type="text" name="category" value={this.state.item.category} />
+                        </div>
+                        <div>
+                            <div><label htmlFor="image">Image</label></div>
+                            <input className="url-class" onChange={this.handleChange} type="url" name="image" value={this.state.item.image} />
+                        </div>
+                        <div>
+                            <div><label htmlFor="price">Price</label></div>
+                            <input onChange={this.handleChange} type="text" name="price" value={this.state.item.price} />
+                        </div>
+                        <input type='submit' className="btn-edit" value='Submit' />
+                    </form>
+                </div>
+
             </div>
         );
     }

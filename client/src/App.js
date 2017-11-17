@@ -9,12 +9,14 @@ import EditItem from './components/EditItem'
 import NewUser from './components/NewUser'
 import NewUserItem from './components/NewUserItem'
 import BuyItNow from './components/BuyItNow'
+import Footer from './components/Footer'
+import './App.css'
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="content"> 
           <NavBar />
           <Switch>
             <Route exact path="/" component={Items} />
@@ -27,6 +29,9 @@ class App extends Component {
             <Route exact path="/users/:id/SignUpPage/NewUserItem/:id" component={NewUserItem}/>
             <Route exact path="/items/:id/BuyItNow" component={BuyItNow}/>
           </Switch>
+          <div className ="FooterArea">
+          <Footer />
+          </div>
         </div>
       </Router>
     )

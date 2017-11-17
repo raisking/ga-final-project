@@ -2,22 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components'
 import { Redirect } from 'react-router-dom'
-
-const FormContainer = styled.div`
-    
-    input{
-        width: 200px;
-        background-color: #ccc; 
-        font-size: 14px;
-        padding: 5px;
-    }
-`
-const FormItem = styled.div`
-    display: block;
-    div{
-        margin: 200px;
-    }  
-`
+import './css/NewUserForm.css'
 
 class ItemForm extends Component {
     state = {
@@ -53,28 +38,26 @@ class ItemForm extends Component {
         }
         
         return (
-            
-            <FormContainer>
             <form onSubmit={this.handleSubmit}>
-                <div>
-                 <FormItem><label htmlFor="name"></label></FormItem>
-                    <input onChange={this.handleChange} type="text" name="name" placeholder="name" value={this.state.name} />
+                <div className ="itemForm">
+                    <div><label htmlFor="name">Name</label></div>
+                    <input onChange={this.handleChange} type="text" name="name" placeholder="" value={this.state.name} />
                 </div>
                 <div>
-                    <FormItem><label htmlFor="category"></label></FormItem>
-                    <input onChange={this.handleChange} type="text" name="category" placeholder ="category" value={this.state.category} />
+                    <div><label htmlFor="category">Category</label></div>
+                    <input onChange={this.handleChange} type="text" name="category" placeholder ="" value={this.state.category} />
                 </div>
                 <div>
-                   <FormItem> <label htmlFor="image"></label></FormItem>
-                    <input onChange={this.handleChange} type="url" name="image" placeholder="image url" value={this.state.image} />
+                 <div> <label htmlFor="image">Image</label></div>
+                    <input onChange={this.handleChange} type="url" name="image" placeholder="" value={this.state.image} />
                 </div>
                 <div>
-                    <FormItem><label htmlFor="price"></label></FormItem>
-                    <input onChange={this.handleChange} type="text" name="price" placeholder="price" value={this.state.price} />
+                   <div> <label htmlFor="price">Price</label></div>
+                    <input onChange={this.handleChange} type="text" name="price" placeholder="" value={this.state.price} />
                 </div>
                 <button>Submit</button>
             </form>
-            </FormContainer>
+           
         );
     }
 }

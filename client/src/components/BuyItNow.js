@@ -44,9 +44,10 @@ class BuyItNow extends Component {
                         <p>Total:{this.state.items.price}</p>
                 
 
-                       <Link key={this.state.items._id} to={`/items/${this.state.items.id}/BuyItNow`}>
-                       <button>Place your order</button>
-                       </Link>
+                       {/* <Link key={this.state.items._id} to={`/items/${this.state.items.id}/BuyItNow`}> */}
+                        <a href= "https://www.paypal.com/signin?country.x=US&locale.x=en_US" target="_blank"> <button>Place your order</button>
+                        </a>
+                       {/* </Link> */}
                     </div>
                     <div class="Wrapper-Flex">
                      

@@ -1,18 +1,21 @@
 
-.outerDiv{
+.outerDivContainer{
   /* display: flex;
   justify-content: center;
   flex-direction: column; */
-  margin-left: 250px;
+  margin-left: 400px;
+}
+.outerDivContainer h1{
+  margin-left: -360px;
 }
 .innerDiv{
 
     width: 50%;
-    margin: 10px;
+    margin-bottom: 50px;
     padding: 30px;  
     border: 1px solid rgb(195, 214, 200); 
     background-color: rgb(255, 255, 255);
-    box-shadow: 2px 2px 2px 2px #ccc;
+    box-shadow: 1px 1px 1px 1px #ccc;
 }
 a{
   color: #fff;

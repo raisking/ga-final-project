@@ -6,7 +6,7 @@ class Api::UsersController < ApplicationController
     end
 
     def create
-        user_params = params.require(:user).permit(:name, :address, :email, :telephone, :bid_amount)
+        user_params = params.require(:user).permit(:name, :address, :email, :telephone, :image, :bid_amount)
         @user = User.new(user_params)
         if @user.save
             render json: @user
@@ -18,13 +18,19 @@ class Api::UsersController < ApplicationController
         @user = User.find_by_id(user_id)
         render json: @user
     end
+
     def destroy
         user_id = params[:id]
-        @user = Item.find_by_id(item_id)
-        @user.destroy
+        @user = User.find_by_id(user_id)
+        @user.delete
         render json: {
             msg: "Successfully Deteled"
         }
     end
 
+    # private 
+
+    # def user_param
+    #     params:require(:user).permit(:name, :address, :email, :telephone, :image)
+    # end
 end

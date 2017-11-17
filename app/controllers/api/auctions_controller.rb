@@ -18,8 +18,8 @@ class Api::AuctionsController < ApplicationController
     def show 
         auction_id = params[:id]
         @auction = Auction.find_by_id(auction_id)
-        @auction.order(created_at: :desc)
-        render json: @auction
+        
+        render json: @auction.order(created_at: :desc)
 
     end
     

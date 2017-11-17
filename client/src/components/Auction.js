@@ -14,7 +14,7 @@ class Auction extends Component {
     }
     getAllAuctions = async () => {
         const res = await axios.get('/api/auctions')
-        this.setState({auctions: res.data})
+        this.setState({auctions: res.data.reverse()})
     }
     toggleShowNewForm = () => {
         this.setState({showNewForm: !this.state.showNewForm})

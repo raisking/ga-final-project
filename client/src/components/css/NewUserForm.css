@@ -1,3 +1,8 @@
 .itemForm{
     margin-top: 20px;
 }
+input{
+    border: 1px solid rgb(31, 28, 28);
+    height: 30px;
+    padding: 5px;
+}   

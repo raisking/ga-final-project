@@ -30,11 +30,11 @@ Item.create({name: "2016 Lexus RC 350",
 
 
 User.create({
-    name:"Barrack Obama",
-    address: "Chicago",
-    email: "obama@gmail.com",
+    name:"Mike Tyson",
+    address: "New York",
+    email: "miketyson@gmail.com",
     telephone: "333334455",
-    image: 'https://i.ytimg.com/vi/WQGJAIYtWD4/maxresdefault.jpg',
+    image: 'https://pbs.twimg.com/media/DN98Ml6W4AA_9R1.png',
     bid_amount: "17,444"
 })
 

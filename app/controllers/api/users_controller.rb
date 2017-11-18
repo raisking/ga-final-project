@@ -27,5 +27,4 @@ class Api::UsersController < ApplicationController
             msg: "Successfully Deteled"
         }
     end
-
 end

@@ -9,7 +9,7 @@ class NavBar extends Component {
         return (
             <div className="divNavBar">
                 <div className="itemNavBarRight">
-            </div>
+                </div>
                 <div className="itemNavBar">
                     <Link to="/">Home</Link>
                 </div>

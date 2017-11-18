@@ -1,14 +1,6 @@
 .outerDiv{
-    /* width: 60%;
-    margin-top:20px;
-    padding: 25px;
-    border: 1px solid rgb(195, 214, 200); 
-    background-color: rgb(255, 255, 255);
-    box-shadow: 2px 2px 2px 2px #ccc; */
     display: flex;
     flex-direction: column;
-
-
 }
 h2{
     font-size: 2.2rem;

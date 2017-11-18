@@ -14,7 +14,7 @@ class NewUser extends Component {
     }
     getAllUsers = async () => {
         const res = await axios.get('/api/users')
-        this.setState({ users: res.data})
+        this.setState({ users: res.data })
     }
     toggleShowNewForm = () => {
         this.setState({ showNewForm: !this.state.showNewForm })
@@ -33,11 +33,11 @@ class NewUser extends Component {
 
     render() {
         return (
-         
+
             <div className="outerDivContainer">
-             <div>
-            <h1>User Profile</h1>
-            </div>
+                <div>
+                    <h1>User Profile</h1>
+                </div>
                 {this.state.users.map(user => (
                     <div className="innerDiv">
                         {console.log(user.image)}
@@ -48,7 +48,6 @@ class NewUser extends Component {
                         <p>Address: {user.address}</p>
                         <p>Email: {user.email}</p>
                         <p>Telephone: {user.telephone}</p>
-
                         <button onClick={() => this.deleteUser(user.id)}>Delete</button>
                         <button>
                             <Link key={user._id} to={`/users/${user.id}/SignUpPage`}>Sell New Item</Link>

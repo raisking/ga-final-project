@@ -9,31 +9,29 @@ class Auction extends Component {
         auctions: [],
         showNewForm: true
     }
-    componentWillMount(){
+    componentWillMount() {
         this.getAllAuctions()
     }
     getAllAuctions = async () => {
         const res = await axios.get('/api/auctions')
-        this.setState({auctions: res.data.reverse()})
+        this.setState({ auctions: res.data.reverse() })
     }
     toggleShowNewForm = () => {
-        this.setState({showNewForm: !this.state.showNewForm})
+        this.setState({ showNewForm: !this.state.showNewForm })
     }
     render() {
         return (
             <div>
-                {/* <h3>Must bid higher than current bid</h3> */}
-                <button onClick ={this.toggleShowNewForm}>Place Bid</button>
-                {this.state.showNewForm ? <AuctionForm getAllAuctions={this.getAllAuctions}/> : null}
+                <button onClick={this.toggleShowNewForm}>Place Bid</button>
+                {this.state.showNewForm ? <AuctionForm getAllAuctions={this.getAllAuctions} /> : null}
 
                 {this.state.auctions.map(auction => (
                     <div class="bid_Wrapper">
                         <p>{auction.name}</p>
                         <p>${auction.amount}</p>
                     </div>
-                    
                 ))}
-               
+
             </div>
         );
     }

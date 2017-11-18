@@ -48,7 +48,6 @@ class EditItem extends Component {
     }
 
     render() {
-        // const {itemId}= this.props.match.params
         if (this.state.redirectToItem) {
             return <Redirect to={`/`} />
         }
@@ -76,7 +75,6 @@ class EditItem extends Component {
                         <input type='submit' className="btn-edit" value='Submit' />
                     </form>
                 </div>
-
             </div>
         );
     }

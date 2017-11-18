@@ -28,9 +28,4 @@ class Api::UsersController < ApplicationController
         }
     end
 
-    # private 
-
-    # def user_param
-    #     params:require(:user).permit(:name, :address, :email, :telephone, :image)
-    # end
 end

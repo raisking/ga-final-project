@@ -26,21 +26,19 @@ class UserBidForm extends Component {
         await axios.post('/api/users', payload)
         await this.props.getAllUsers()
     }
-
-
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div class="WrapperUserForm">
                     <div class="UserForm">
                         <div>
-                           <div><label htmlFor="name" ></label></div>
-                                <input onChange={this.handleChange} type="text" 
+                            <div><label htmlFor="name" ></label></div>
+                            <input onChange={this.handleChange} type="text"
                                 name="name" placeholder="Name" value={this.state.name} />
                         </div>
                         <div>
                             <div><label htmlFor="price" ></label></div>
-                                <input onChange={this.handleChange} type="text" 
+                            <input onChange={this.handleChange} type="text"
                                 name="bid_amount" placeholder="Price" value={this.state.bid_amount} />
                         </div>
                     </div>

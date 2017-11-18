@@ -26,21 +26,20 @@ class ItemPost extends Component {
 
         } catch (error) {
             console.log(error)
-          
+
         }
     }
-        
+
     render() {
 
         return (
             <div>
                 <div class="countDown">
-                <h2>Time left: 12h: 33m: 22s </h2> 
+                    <h2>Time left: 12h: 33m: 22s </h2>
                 </div>
                 <div id="wrapper">
                     <div class="Wrapper-Flex">
-                        <h2>{this.state.items.name} </h2>
-                        <img src={this.state.items.image} alt="Car"/>
+                        <img src={this.state.items.image} alt="Car" />
                         <p>{this.state.items.name}</p>
                         <p>Brand: {this.state.items.category}</p>
                         <p>Price: {this.state.items.price}</p>
@@ -48,14 +47,12 @@ class ItemPost extends Component {
                         <a href="#"><p>Contact Seller</p></a>
                         <a href="#"><p>Print This Page</p></a>
                         <a href="#"><p>Share This Product</p></a>
-
-                       <Link key={this.state.items._id} to={`/items/${this.state.items.id}/BuyItNow`}>
-                       <button>Buy It Now</button>
-                       </Link>
+                        <Link key={this.state.items._id} to={`/items/${this.state.items.id}/BuyItNow`}>
+                            <button>Buy It Now</button>
+                        </Link>
                     </div>
                     <div class="Wrapper-Flex">
-                        <Auction />  
-                        {/* <UserBid/> */}
+                        <Auction />
                     </div>
                 </div>
             </div>

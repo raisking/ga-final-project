@@ -24,11 +24,8 @@
 .footerDivClass{
     display: flex;
     justify-content: center;
-    
- 
 }
 .footerInside{
-    /* border: 1px solid red; */
     padding-left: 150px;
     
 }
@@ -45,10 +42,7 @@
     
     text-align: center; 
 }
-.footerInside p {
-    /* margin-top: -20px; */
 
-}
 .developer h4{
     margin-top: 15px;
 }

@@ -9,13 +9,13 @@ class AuctionForm extends Component {
     }
     handleChange = (event) => {
         const name = event.target.name
-        const newState = {...this.state}
+        const newState = { ...this.state }
         newState[name] = event.target.value
         this.setState(newState)
     }
-    handleSubmit = async(event)=>{
+    handleSubmit = async (event) => {
         event.preventDefault()
-        const payload ={
+        const payload = {
             name: this.state.name,
             amount: this.state.amount
         }
@@ -30,13 +30,13 @@ class AuctionForm extends Component {
                 <div class="WrapperUserForm">
                     <div class="UserForm">
                         <div>
-                           <div><label htmlFor="name" ></label></div>
-                                <input onChange={this.handleChange} type="text" 
+                            <div><label htmlFor="name" ></label></div>
+                            <input onChange={this.handleChange} type="text"
                                 name="name" placeholder="Name" value={this.state.name} />
                         </div>
                         <div>
                             <div><label htmlFor="amount" ></label></div>
-                                <input onChange={this.handleChange} type="text" 
+                            <input onChange={this.handleChange} type="text"
                                 name="amount" placeholder="Amount" value={this.state.amount} />
                         </div>
                     </div>

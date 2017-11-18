@@ -15,7 +15,7 @@ class Items extends Component {
     }
     getAllItems = async () => {
         const res = await axios.get('/api/items')
-        this.setState({ items: res.data.reverse()})
+        this.setState({ items: res.data.reverse() })
     }
     toggleShowNewForm = () => {
         this.setState({ showNewForm: !this.state.showNewForm })
@@ -26,15 +26,16 @@ class Items extends Component {
         console.log(deletedItems)
         deletedItems.pop(res.data)
         this.setState({
-            items: deletedItems})
-    }   
+            items: deletedItems
+        })
+    }
 
 
-    
-    render() {  
+
+    render() {
         return (
             <div className="itemsContainerWrapper">
-                <h1>Auto Auction</h1>
+                <h1>Everything you need buy and sell online</h1>
                 <div className="WrapperFlex">
                     {this.state.items.map(item => (
                         <div className="containerItems">
@@ -49,9 +50,9 @@ class Items extends Component {
                                 <Link key={item._id} to={`/items/${item.id}`}>
                                     <button>Bid Now</button>
                                 </Link>
-                                <button onClick={() => this.deleteItem(item.id)}>Delete</button> 
-                                <Link key = {item._id} to={`/items/${item.id}/edit`}>        
-                                <button>Edit</button>      
+                                <button onClick={() => this.deleteItem(item.id)}>Delete</button>
+                                <Link key={item._id} to={`/items/${item.id}/edit`}>
+                                    <button>Edit</button>
                                 </Link>
                             </div>
                         </div>

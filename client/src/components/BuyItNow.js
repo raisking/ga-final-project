@@ -25,32 +25,28 @@ class BuyItNow extends Component {
 
         } catch (error) {
             console.log(error)
-          
+
         }
-    }   
+    }
     render() {
 
         return (
             <div>
-    
+
                 <h2>CheckOut</h2>
-             
+
                 <div id="wrapperItemPost">
                     <div class="Wrapper-Flex">
                         <h2>{this.state.items.name} </h2>
-                        <img src={this.state.items.image} alt="Car"/>
+                        <img src={this.state.items.image} alt="Car" />
                         <p>{this.state.items.name}</p>
                         <p>{this.state.items.category}</p>
                         <p>Total:{this.state.items.price}</p>
-                
-
-                       {/* <Link key={this.state.items._id} to={`/items/${this.state.items.id}/BuyItNow`}> */}
-                        <a href= "https://www.paypal.com/signin?country.x=US&locale.x=en_US" target="_blank"> <button>Place your order</button>
+                        <a href="https://www.paypal.com/signin?country.x=US&locale.x=en_US" target="_blank"> <button>Place your order</button>
                         </a>
-                       {/* </Link> */}
                     </div>
                     <div class="Wrapper-Flex">
-                     
+
                     </div>
                 </div>
             </div>

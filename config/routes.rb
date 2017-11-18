@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     patch "/items/:id", to: "items#update"
     delete "/items/:id", to: "items#destroy"
 
-    # get"/users", to "users#index", as: "users"  
+
     post "/users", to: "users#create"
     get "/users", to: "users#index"
     get "/users/:id", to: "users#show", as: "user"

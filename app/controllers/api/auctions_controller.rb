@@ -5,7 +5,6 @@ class Api::AuctionsController < ApplicationController
         render json: @auctions
     end
 
-
     def create
         auction_params = params.require(:auction).permit(:name, :amount)
         @auction = Auction.new(auction_params)

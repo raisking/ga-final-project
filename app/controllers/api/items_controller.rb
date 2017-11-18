@@ -20,7 +20,6 @@ class Api::ItemsController < ApplicationController
     #         item: @item
     #     }
   end
-  
   #create a new item in the database
   def create 
       #whitelist params and save them to a variable 

@@ -18,19 +18,20 @@ body{
     font-weight: bold;
 }   
 .WrapperFlex{
+    margin: 0 auto;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 30px;
+    justify-content: space-between;
     padding: 20px;
 }
 .itemsContainerWrapper{
-    background-color: #ccc;
     min-height: 300px;
     height: auto;
 }
 .containerItems{
+    border: 1px solid #000;
     background-color: rgb(255, 255, 255);
     margin: 20px;
     width: 300px;

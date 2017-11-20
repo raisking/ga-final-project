@@ -31,13 +31,12 @@ body{
     height: auto;
 }
 .containerItems{
-    /* border: 1px solid rgb(28, 126, 165);  */
     background-color: rgb(255, 255, 255);
     margin: 20px;
     width: 300px;
     height: auto;
     padding: 0;  
-    box-shadow: 1px 1px 1px 1px rgb(95, 110, 170);
+    box-shadow: 5px 5px 5px 1px rgb(66, 36, 36);
 }
 button {
     background: #1a4f72;
@@ -56,6 +55,11 @@ button:hover {
  h3{
     color: rgb(14, 40, 155);
 }
+.imageZoomDiv{
+    position: relative;
+    overflow: hidden;
+  }
+
 .imageZoomDiv  img{
     max-width: 100%;
     transition: all 0.3s;
@@ -67,8 +71,4 @@ button:hover {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  .imageZoomDiv{
-    position: relative;
-    overflow: hidden;
   }

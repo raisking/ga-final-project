@@ -22,20 +22,23 @@
   padding-right: 800px;
 }
 .footerDivClass{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .footerInside{
-    padding-left: 150px;
+    padding-left: 40px;
+    /* background-color: rgb(172, 118, 118); */
     
 }
 .footerCopyRight{
     padding-top: 30px;
     padding-bottom: 20px;
-   margin-left: auto;
-   margin-right: auto;  
-   border: 1px solid #ccc;
-   background: linear-gradient(to bottom, #c4c0c0 16%, #8b8b8f 92%);    
+    margin-left: auto;
+    margin-right: auto;  
+    border: 1px solid #ccc;
+    background: linear-gradient(to bottom, #c4c0c0 16%, #8b8b8f 92%);    
  
 }
 .developer{

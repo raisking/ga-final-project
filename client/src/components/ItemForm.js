@@ -48,8 +48,8 @@ class ItemForm extends Component {
                     <input onChange={this.handleChange} type="text" name="category" placeholder="" value={this.state.category} />
                 </div>
                 <div>
-                    <div> <label htmlFor="image">Image</label></div>
-                    <div><input onChange={this.handleChange} name="image" type="file" value={this.state.image} /> </div>
+                    <div><label htmlFor="image">Image</label></div>
+                    <div><input onChange={this.handleChange} name="image" value={this.state.image} /> </div>
                 </div>
                 <div>
                     <div> <label htmlFor="price">Price</label></div>

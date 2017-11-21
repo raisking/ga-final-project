@@ -1,6 +1,7 @@
 .outerDiv{
     display: flex;
     flex-direction: column;
+    height: 7       0vh;
 }
 h2{
     font-size: 2.2rem;

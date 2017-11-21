@@ -23,8 +23,8 @@ class LoginPage extends Component {
     render() {
         return (
             <div className="outerDiv">
-                <h2>Create a New User</h2>
-                <div className="innerDivForm">
+                <h2>Create a πNew User</h2>
+                <div className="innerDivFoπrm">
                     <button onClick={this.toggleShowNewForm}>New</button>
                     {this.state.showNewForm ? <NewUserForm getAllUsers={this.getAllUsers} /> : null}
                 </div>
